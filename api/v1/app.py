@@ -23,10 +23,6 @@ def CloseDB(error):
 @app.errorhandler(404)
 def NotFound(error):
     """ 404 Error
-    ---
-    responses:
-      404:
-        description: a resource was not found
     """
     return make_response(jsonify({'error': "Not found"}), 404)
 
